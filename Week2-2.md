@@ -1,3 +1,5 @@
+```cpp
+//직사각형의 면적 구하기
 #include <iostream>
 
 using namespace std;
@@ -16,3 +18,4 @@ int main()
     std::cout << m.Mul() << endl;
     std::cout << n.Mul();
 }
+```
