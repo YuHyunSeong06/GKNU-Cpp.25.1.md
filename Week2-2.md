@@ -1,5 +1,5 @@
 ```cpp
-//직사각형의 면적 구하기
+//직사각형의 면적 구하기 클래스
 #include <iostream>
 
 using namespace std;
