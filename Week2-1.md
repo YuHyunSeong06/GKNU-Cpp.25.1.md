@@ -1,3 +1,4 @@
+```cpp
 #include <iostream>
 
 class CRect {
@@ -16,3 +17,4 @@ CRect::CRect(int a, int b) {
 			CRect r(3, 4);
 				std::cout << r.Area();
 		}
+```
