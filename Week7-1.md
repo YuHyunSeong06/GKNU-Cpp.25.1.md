@@ -52,3 +52,41 @@ int main() {
 	return 0;
 }
 ```
+
+```cpp
+#include <iostream>
+#include <memory>
+
+class CPnt {
+private:
+    int x, y;
+public:
+    CPnt(int x, int y) :x(x), y(y) {}
+    void pr() const {
+        std::cout << x << ", " << y << '\n';
+    };
+};
+int main() {
+    std::unique_ptr <CPnt> p = std::make_unique <CPnt>( 2,3 );
+    p->pr();
+}
+```
+
+```cpp
+#include <iostream>
+#include <memory>
+
+class CPnt {
+private:
+    int x, y;
+public:
+    CPnt(int x, int y) :x(x), y(y) {}
+    void pr() const {
+        std::cout << x << ", " << y << '\n';
+    };
+};
+int main() {
+    CPnt me[3] = { {1,1},{2,2},{3,3} };
+    me[0].pr();
+}
+```
