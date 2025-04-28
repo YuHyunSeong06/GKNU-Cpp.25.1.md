@@ -18,3 +18,17 @@ CRect::CRect(int a, int b) {
 				std::cout << r.Area();
 		}
 ```
+```cpp
+#include <iostream>
+#include <string>
+
+using namespace std;
+int main() {
+	string s = "World ";
+	cout << s << endl;
+	//문자열 연결
+	string cs = "Hello, " + s + "GKNU!!";
+	cout << cs;
+	return 0;
+}
+```
