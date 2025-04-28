@@ -8,9 +8,12 @@ using namespace std; // vector, sort, cout
 
 	int main() {
 		vector <int> v = { 2,1,5,4,3 };
-		sort(v.begin(), v.end()); // begin 시작되는 점, sort는 정렬, end 끝내는점
-		//for (auto i : v)cout << i << ' '; cout << '\n';
-		for (int i = 0; i < v.size(); i++) {
+		sort(v.begin(), v.end()); // sort(start_iterator, end_iterator, compare); 매개변수
+		for (auto i : v){    // 범위기반 for 문
+			cout << i << ' ';
+			cout << '\n';
+		}
+		for (int i = 0; i < v.size(); i++) { // 기본 for 문문
 			cout << v[i] << ' ';
 			cout << '\n';
 		}
@@ -65,7 +68,7 @@ int main() {
 	fc["apple"] = 3;
 	fc["orange"] = 5;
 	fc["banana"] = 2;
-	for (auto it = fc.begin(); it != fc.end(); ++it) {
+	for (auto it = fc.begin(); it != fc.end(); ++it) { // iterator 활용 for 문문
 		cout << it->first << ' ' << it->second << endl;
 		cout << endl;
 	}
