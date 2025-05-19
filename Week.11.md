@@ -17,6 +17,9 @@
 15. **헤더와 소스 파일 분리 및 클래스 모듈화 방식**
 
 # SQlite3를 이용한 코드
+#### sqlite3 사이트에서 다운로드 후 압축을 풀고  
+#### visual studio 2022에서 솔루션 탐색기를 통해 
+#### 코드의 위치를 추적해 파일을 넣는다.
 ```cpp
 #include <iostream>
 #include "sqlite3.h"
