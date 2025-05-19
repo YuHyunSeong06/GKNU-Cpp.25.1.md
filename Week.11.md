@@ -99,6 +99,7 @@ int main() {
 ```
 # OpenCV를 통한 코드
 #### NuGet 패키지를 통해 OpenCV 4.2를 다운적용시킨다
+### 사각형 그리기
 ```cpp
 #include <opencv2/opencv.hpp>
 
@@ -122,6 +123,37 @@ int main() {
     // 6. 결과 이미지 표시
     cv::imshow("Rectangle", image);
     cv::waitKey(0);
+    return 0;
+}
+```
+### 심재창 교수님 사진 출력
+#### 사진도 소스파일에 추가한다
+```cpp
+#include <opencv2/opencv.hpp>
+#include <iostream>
+
+using namespace cv;
+using namespace std;
+
+int main() {
+    // 1. 이미지 파일 읽기
+    Mat img = imread("mosajb8iV4.jpg");  // sample.jpg 파일을 읽어옴 <- 반드시 확인하세요.
+    if (img.empty()) {
+        cerr << "이미지를 불러올 수 없습니다." << endl;
+        return -1;
+    }
+
+    // 2. 그레이스케일 변환
+    Mat gray;
+    cvtColor(img, gray, COLOR_BGR2GRAY);
+
+    // 3. 이미지 출력
+    imshow("Original Image", img);  // 원본 이미지 출력
+    imshow("Gray Image", gray);       // 그레이스케일 이미지 출력
+
+    // 4. 키 입력 대기 (0이면 무한대기)
+    waitKey(0);
+
     return 0;
 }
 ```
