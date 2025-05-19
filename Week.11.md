@@ -97,3 +97,31 @@ int main() {
     return 0;
 }
 ```
+# OpenCV를 통한 코드
+#### NuGet 패키지를 통해 OpenCV 4.2를 다운적용시킨다
+```cpp
+#include <opencv2/opencv.hpp>
+
+int main() {
+    // 1. 400x400 크기의 검은색 배경 이미지 생성
+    cv::Mat image = cv::Mat::zeros(400, 400, CV_8UC3);
+
+    // 2. 사각형의 시작점(왼쪽 위)과 끝점(오른쪽 아래)
+    cv::Point pt1(100, 100);
+    cv::Point pt2(300, 300);
+
+    // 3. 색상 (B, G, R) - 파란색
+    cv::Scalar color(0, 255, 0);
+
+    // 4. 두께 (음수: 채우기, 양수: 테두리 두께)
+    int thickness = -1;
+
+    // 5. 사각형 그리기
+    cv::rectangle(image, pt1, pt2, color, thickness);
+
+    // 6. 결과 이미지 표시
+    cv::imshow("Rectangle", image);
+    cv::waitKey(0);
+    return 0;
+}
+```
